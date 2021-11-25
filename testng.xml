@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Smoke Suite">
+   <test name = "Smoke Tests" parallel = "methods" thread-count = "2">
+    <parameter name="browser" value="chrome" />
+    <parameter name="appUrl" value="https://www.saucedemo.com/" />
+      <classes>
+         <class name = "selenium.e2e.test.tests.smoke.LoginTest"/>
+      </classes>
+   </test>
+</suite>
