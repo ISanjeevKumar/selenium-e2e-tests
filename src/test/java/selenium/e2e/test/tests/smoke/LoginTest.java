@@ -12,7 +12,6 @@ public class LoginTest extends TestBase {
     @Test(description = "Check user should not be able to login with invalid password", dataProvider = "userdata", dataProviderClass = TestDataProvider.class)
     public void shouldNotBeAbleToLoginWithInvalidCredentials(String username, String password) {
         try {
-            System.out.println(username + ":" + password);
             SauceLabApp sauceLabApp = new SauceLabApp(Browser.CHROME);
             sauceLabApp.loginPage().login(username, password);
 
